@@ -1,0 +1,15 @@
+{
+  "resource": [],
+  "control_data": {},
+  "control_info": [],
+  "setting": {
+    "griddestiny": 50,
+    "count": 0,
+    "enableattach": true,
+    "size": [ 1280, 720 ],
+    "background": "",
+    "layoutpos": [ 0.0, 0.0 ],
+    "layoutscale": [ 1.0, 1.0 ],
+    "enablebackground": false
+  }
+}

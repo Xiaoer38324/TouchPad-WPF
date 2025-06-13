@@ -1,0 +1,218 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ButtonDefImage.png" />
+    <None Remove="ButtonDefMask.png" />
+    <None Remove="GroupDefImage.png" />
+    <None Remove="Hidder.png" />
+    <None Remove="Hidder_Black.png" />
+    <None Remove="JoyBGDef.png" />
+    <None Remove="Resource\AboutMe.png" />
+    <None Remove="Resource\App.png" />
+    <None Remove="Resource\ButtonDefImage.png" />
+    <None Remove="Resource\ButtonDefMask.png" />
+    <None Remove="Resource\ButtonImage\CONTROL.png" />
+    <None Remove="Resource\ButtonImage\DOWN.png" />
+    <None Remove="Resource\ButtonImage\ESCAPE.png" />
+    <None Remove="Resource\ButtonImage\LBUTTON.png" />
+    <None Remove="Resource\ButtonImage\LEFT.png" />
+    <None Remove="Resource\ButtonImage\MBUTTON.png" />
+    <None Remove="Resource\ButtonImage\MENU.png" />
+    <None Remove="Resource\ButtonImage\RBUTTON.png" />
+    <None Remove="Resource\ButtonImage\RIGHT.png" />
+    <None Remove="Resource\ButtonImage\SHIFT.png" />
+    <None Remove="Resource\ButtonImage\SPACE.png" />
+    <None Remove="Resource\ButtonImage\TAB.png" />
+    <None Remove="Resource\ButtonImage\UP.png" />
+    <None Remove="Resource\ButtonImage\VK_0.png" />
+    <None Remove="Resource\ButtonImage\VK_1.png" />
+    <None Remove="Resource\ButtonImage\VK_2.png" />
+    <None Remove="Resource\ButtonImage\VK_3.png" />
+    <None Remove="Resource\ButtonImage\VK_4.png" />
+    <None Remove="Resource\ButtonImage\VK_5.png" />
+    <None Remove="Resource\ButtonImage\VK_6.png" />
+    <None Remove="Resource\ButtonImage\VK_7.png" />
+    <None Remove="Resource\ButtonImage\VK_8.png" />
+    <None Remove="Resource\ButtonImage\VK_9.png" />
+    <None Remove="Resource\ButtonImage\VK_A.png" />
+    <None Remove="Resource\ButtonImage\VK_B.png" />
+    <None Remove="Resource\ButtonImage\VK_C.png" />
+    <None Remove="Resource\ButtonImage\VK_D.png" />
+    <None Remove="Resource\ButtonImage\VK_E.png" />
+    <None Remove="Resource\ButtonImage\VK_F.png" />
+    <None Remove="Resource\ButtonImage\VK_G.png" />
+    <None Remove="Resource\ButtonImage\VK_H.png" />
+    <None Remove="Resource\ButtonImage\VK_I.png" />
+    <None Remove="Resource\ButtonImage\VK_J.png" />
+    <None Remove="Resource\ButtonImage\VK_K.png" />
+    <None Remove="Resource\ButtonImage\VK_L.png" />
+    <None Remove="Resource\ButtonImage\VK_M.png" />
+    <None Remove="Resource\ButtonImage\VK_N.png" />
+    <None Remove="Resource\ButtonImage\VK_O.png" />
+    <None Remove="Resource\ButtonImage\VK_P.png" />
+    <None Remove="Resource\ButtonImage\VK_Q.png" />
+    <None Remove="Resource\ButtonImage\VK_R.png" />
+    <None Remove="Resource\ButtonImage\VK_S.png" />
+    <None Remove="Resource\ButtonImage\VK_T.png" />
+    <None Remove="Resource\ButtonImage\VK_U.png" />
+    <None Remove="Resource\ButtonImage\VK_V.png" />
+    <None Remove="Resource\ButtonImage\VK_W.png" />
+    <None Remove="Resource\ButtonImage\VK_X.png" />
+    <None Remove="Resource\ButtonImage\VK_Y.png" />
+    <None Remove="Resource\ButtonImage\VK_Z.png" />
+    <None Remove="Resource\Editor.png" />
+    <None Remove="Resource\File.png" />
+    <None Remove="Resource\Game.png" />
+    <None Remove="Resource\GroupDefImage.png" />
+    <None Remove="Resource\Hidder.png" />
+    <None Remove="Resource\Hidder_Black.png" />
+    <None Remove="Resource\HideAndShow.png" />
+    <None Remove="Resource\JoyBGDef.png" />
+    <None Remove="Resource\layoutfile.tcom" />
+    <None Remove="Resource\Luncher.png" />
+    <None Remove="Resource\Selected.png" />
+    <None Remove="Resource\title.png" />
+    <None Remove="Resource\WindowSelect.ico" />
+    <None Remove="Resource\WindowSelect.png" />
+    <None Remove="Selected.png" />
+    <None Remove="test2.png" />
+    <None Remove="照片.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H.InputSimulator" Version="1.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="System.Management" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\AboutMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\App.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\ButtonDefImage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\ButtonDefMask.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\ButtonImage\MENU.png" />
+    <Resource Include="Resource\ButtonImage\CONTROL.png" />
+    <Resource Include="Resource\ButtonImage\DOWN.png" />
+    <Resource Include="Resource\ButtonImage\ESCAPE.png" />
+    <Resource Include="Resource\ButtonImage\LBUTTON.png" />
+    <Resource Include="Resource\ButtonImage\LEFT.png" />
+    <Resource Include="Resource\ButtonImage\MBUTTON.png" />
+    <Resource Include="Resource\ButtonImage\RBUTTON.png" />
+    <Resource Include="Resource\ButtonImage\RIGHT.png" />
+    <Resource Include="Resource\ButtonImage\SHIFT.png" />
+    <Resource Include="Resource\ButtonImage\SPACE.png" />
+    <Resource Include="Resource\ButtonImage\TAB.png" />
+    <Resource Include="Resource\ButtonImage\UP.png" />
+    <Resource Include="Resource\ButtonImage\VK_0.png" />
+    <Resource Include="Resource\ButtonImage\VK_1.png" />
+    <Resource Include="Resource\ButtonImage\VK_2.png" />
+    <Resource Include="Resource\ButtonImage\VK_3.png" />
+    <Resource Include="Resource\ButtonImage\VK_4.png" />
+    <Resource Include="Resource\ButtonImage\VK_5.png" />
+    <Resource Include="Resource\ButtonImage\VK_6.png" />
+    <Resource Include="Resource\ButtonImage\VK_7.png" />
+    <Resource Include="Resource\ButtonImage\VK_8.png" />
+    <Resource Include="Resource\ButtonImage\VK_9.png" />
+    <Resource Include="Resource\ButtonImage\VK_A.png" />
+    <Resource Include="Resource\ButtonImage\VK_B.png" />
+    <Resource Include="Resource\ButtonImage\VK_C.png" />
+    <Resource Include="Resource\ButtonImage\VK_D.png" />
+    <Resource Include="Resource\ButtonImage\VK_E.png" />
+    <Resource Include="Resource\ButtonImage\VK_F.png" />
+    <Resource Include="Resource\ButtonImage\VK_G.png" />
+    <Resource Include="Resource\ButtonImage\VK_H.png" />
+    <Resource Include="Resource\ButtonImage\VK_I.png" />
+    <Resource Include="Resource\ButtonImage\VK_J.png" />
+    <Resource Include="Resource\ButtonImage\VK_K.png" />
+    <Resource Include="Resource\ButtonImage\VK_L.png" />
+    <Resource Include="Resource\ButtonImage\VK_M.png" />
+    <Resource Include="Resource\ButtonImage\VK_N.png" />
+    <Resource Include="Resource\ButtonImage\VK_O.png" />
+    <Resource Include="Resource\ButtonImage\VK_P.png" />
+    <Resource Include="Resource\ButtonImage\VK_Q.png" />
+    <Resource Include="Resource\ButtonImage\VK_R.png" />
+    <Resource Include="Resource\ButtonImage\VK_S.png" />
+    <Resource Include="Resource\ButtonImage\VK_T.png" />
+    <Resource Include="Resource\ButtonImage\VK_U.png" />
+    <Resource Include="Resource\ButtonImage\VK_V.png" />
+    <Resource Include="Resource\ButtonImage\VK_W.png" />
+    <Resource Include="Resource\ButtonImage\VK_X.png" />
+    <Resource Include="Resource\ButtonImage\VK_Y.png" />
+    <Resource Include="Resource\ButtonImage\VK_Z.png" />
+    <Resource Include="Resource\Editor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\File.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Game.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\GroupDefImage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Hidder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Hidder_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\HideAndShow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\JoyBGDef.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\layoutfile.tcom">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Luncher.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Selected.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\title.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\WindowSelect.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\WindowSelect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

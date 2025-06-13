@@ -1,0 +1,74 @@
+﻿<Window x:Class="WpfApp1.ResourceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ResourceWindow" Height="500" Width="549" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="SelectFunction"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Content="选定" Grid.Row="0" Click="Select_Click" />
+            <Button Content="导入资源" Grid.Row="1" Click="Import_Click" />
+        </Grid>
+        <Grid x:Name="ManagerFunction" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Content="导入资源" Grid.Row="0" Click="Import_Click" />
+            <Button Content="删除未使用资源" Grid.Row="3" Click="Clear_Click"/>
+            <Button Content="删除资源" Grid.Row="1"  Click="Delete_Click" />
+            <Button  Content="修改标识" Grid.Row="2" Click="Change_Click"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Grid.RowSpan="2">
+            <ListView x:Name="ResourceList" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="Black" FontSize="16" SelectionChanged="ResourceList_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="标识" DisplayMemberBinding="{Binding ident}" />
+                        <GridViewColumn Header="类型" DisplayMemberBinding="{Binding type}" />
+                        <GridViewColumn Header="MD5" DisplayMemberBinding="{Binding md5}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="61*"/>
+                <ColumnDefinition Width="19*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="名称过滤:" VerticalAlignment="Center" Height="15" Width="51"/>
+            <TextBlock HorizontalAlignment="Left"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Text="类型过滤:" Height="15" Width="51"/>
+            <TextBox x:Name="Name_Filter" Grid.Column="1" Height="17" Grid.Row="0" TextChanged="Name_Filter_TextChanged"   Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="Type_Filter" Grid.Column="1"  Grid.Row="1"  SelectionChanged="Type_Filter_SelectionChanged"  Height="20" Grid.ColumnSpan="2" />
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="1"  Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image x:Name="PreView"/>
+        </Border>
+
+    </Grid>
+</Window>

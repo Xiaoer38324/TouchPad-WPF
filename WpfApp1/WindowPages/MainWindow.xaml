@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.User_Control"
+        x:Class="WpfApp1.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" 
+        Loaded="Sep_OnLoaded"
+        ShowActivated="false"
+        WindowStyle="None">
+    <Window.Resources>
+        <ControlTemplate x:Key="TestTransImage"/>
+    </Window.Resources>
+    <Canvas x:Name="Window" Margin="0,10,-1,1" Background="White">
+        <Button Content="Button" Canvas.Left="180" Canvas.Top="212" Click="NormalButton_Click"/>
+        <Slider x:Name="slider" Canvas.Left="479" Canvas.Top="291" Minimum="200" Maximum="500" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120"/>
+        <Slider x:Name="slider_Copy" Canvas.Left="479" Canvas.Top="314" Width="120" Minimum="200" Maximum="500" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <local:NormalButton Height="100" Canvas.Left="289" Canvas.Top="44" Width="100" Source="/Resource/HideAndShow.png" TouchDown="NormalButton_TouchDown"/>
+        <Image Height="100" Canvas.Left="616" Canvas.Top="162" Width="100" Source="/Resource/Luncher.png"  TouchDown="NormalButton_TouchDown"/>
+    </Canvas>
+    <!--<WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" />
+
+    </WindowChrome.WindowChrome>-->
+</Window>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>E:\data\c#\TouchCoreTest\WpfApp1\WpfApp1\Properties\PublishProfiles\FolderProfile1.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="WindowPages\Debug_Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\File_Guide.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\File_Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\FixForLockingMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\Attribute_ListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User_Control\NormalJoy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestCode\testpage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User_Control\NormalUButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\Con_CreateInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\Con_Search.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\Editor_Setting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\GameRegister.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\KeysRegister.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\MainWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\ResourceIdent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\ResourceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\TextInput.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowPages\TouchPad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestCode\TouchTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="WindowPages\Debug_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\File_Guide.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\File_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\FixForLockingMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\Attribute_ListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\Con_CreateInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\Con_Search.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\Editor_Setting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\GameRegister.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\KeysRegister.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\MainWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User_Control\NormalJoy.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TestCode\testpage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User_Control\NormalUButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\ProcessSelect.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\ResourceIdent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\ResourceWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\TextInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowPages\TouchPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TestCode\TouchTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

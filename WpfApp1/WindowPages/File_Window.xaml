@@ -1,0 +1,84 @@
+﻿<Window x:Class="WpfApp1.WindowPages.File_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.WindowPages"
+        xmlns:top="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="File_Window" Height="450" Width="800" Icon="/Resource/File.png">
+    <Window.Resources>
+        <top:PathToImage x:Key="pts"/>
+        <ContextMenu x:Key="ContextMenuItem">
+            <MenuItem Name="ItemName" Header="名称"/>
+            <Separator/>
+            <Separator/>
+            <MenuItem Name="ItemDelete" Header="删除" Click="ItemDelete_Click"/>
+            <Separator/>
+            <MenuItem Name="ItemEditor" Header="编辑" >
+                    <MenuItem  Header="游戏程序信息" Click="ItemEditor_GameInfo_Click"/>
+                    <Separator/>
+                    <MenuItem  Header="配置设置信息" Click="ItemEditor_Disposition_Click"/>
+                    <Separator/>
+                <MenuItem  Header="按键映射信息" Click="ItemEditor_KeyMaping_Click"/>
+                <Separator/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem  Header="功能" >
+                <MenuItem  Header="导出配置文件" Click="Setting_Export"/>
+                <Separator/>
+                <MenuItem  Header="修复搜索异常" Click="Fix_NotFind"/>
+                <Separator/>
+                <MenuItem  Header="清空搜索修复信息" Click="Clear_NotFind"/>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="ContextMenuList">
+            <MenuItem Name="ListImport" Header="导入" Click="Setting_Import"/>
+            <Separator/>
+            <MenuItem Name="DoGuide" Header="开始引导" Click="DoGuide_Click"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" Grid.Row="1" Background="#FFE2FEFE">
+            <ListBox x:Name="SettingList" Margin="8,0,0,-2" d:ItemsSource="{d:SampleData ItemCount=5}" ContextMenu="{StaticResource ContextMenuList}" >
+                <ListBox.Template>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <WrapPanel Orientation="Horizontal" IsItemsHost="True" ScrollViewer.CanContentScroll="True"/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                </ListBox.Template>
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel CanHorizontallyScroll="False" ContextMenu="{StaticResource ContextMenuItem}">
+                            <Image  Source="{Binding Path=Path,Converter={StaticResource pts}, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60" Height="60" />
+                            <Label Content="{Binding Path=Name,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" HorizontalAlignment="Center" FontSize="12" Height="NaN" Width="60" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1"  Background="#FFB4FFFF" Height="349">
+            <GroupBox Header="Name">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <TextBlock x:Name="Description" Text="" TextWrapping="Wrap"/>
+                </ScrollViewer>
+            </GroupBox>
+        </Border>
+        <Border BorderThickness="1" Grid.ColumnSpan="2" Margin="1,1,0,0" Background="#FF35FCFC" CornerRadius="5,5,5,5">
+            <StackPanel Orientation="Horizontal">
+                <Image Height="85" Width="85" Source="/Resource/File.png"/>
+                <Label Content="文件管理" Height="61" Width="176" FontSize="36"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

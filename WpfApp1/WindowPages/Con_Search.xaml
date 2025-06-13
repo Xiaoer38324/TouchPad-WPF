@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.Con_Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Con_Search" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="338*"/>
+            <RowDefinition Height="97*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="ConList" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="Black" FontSize="16" Grid.Row="0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="名称" DisplayMemberBinding="{Binding name}" />
+                    <GridViewColumn Header="类型" DisplayMemberBinding="{Binding type}" />
+                    <GridViewColumn Header="备注:"  DisplayMemberBinding="{Binding remarks}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="81*"/>
+                <ColumnDefinition Width="560*"/>
+                <ColumnDefinition Width="159*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="27,10,0,0" TextWrapping="Wrap" Text="名称过滤:" VerticalAlignment="Top" Height="15" Width="51"/>
+            <TextBlock HorizontalAlignment="Left" Margin="27,7,0,0" Grid.Row="1" TextWrapping="Wrap" Text="类型过滤:" VerticalAlignment="Top" Height="16" Width="51"/>
+            <TextBlock HorizontalAlignment="Left" Margin="27,4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="备注过滤:" VerticalAlignment="Top" Height="15" Width="51"/>
+            <TextBox x:Name="Name_Filter" HorizontalAlignment="Left" Margin="2,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526" Grid.Column="1" Height="17" Grid.Row="0" TextChanged="TextChanged"/>
+            <TextBox x:Name="Remarks_Filter" HorizontalAlignment="Left" Margin="2,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526" Grid.Column="1" Height="17" Grid.Row="2" TextChanged="TextChanged"/>
+            <ComboBox x:Name="Type_Filter" Grid.Column="1" HorizontalAlignment="Left" Margin="2,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="526" SelectionChanged="Type_Filter_SelectionChanged"/>
+            <Button Grid.Column="2" Content="  定位！"  Grid.RowSpan="3"  Grid.Row="0" Click="Button_Click" FontSize="36" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</Window>

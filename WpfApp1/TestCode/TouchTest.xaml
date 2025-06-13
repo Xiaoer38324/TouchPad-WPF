@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp1.WindowPages.TouchTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.WindowPages"
+        mc:Ignorable="d"
+        Title="TouchTest" Height="500" Width="500" Loaded="Window_Loaded" Background="Transparent" ResizeMode="NoResize" WindowStyle="None"   SizeChanged="Window_SizeChanged">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="-1" />
+    </WindowChrome.WindowChrome>
+    <Border BorderBrush="Black" BorderThickness="1" >
+        <Canvas x:Name="Test"/>
+    </Border>
+</Window>
